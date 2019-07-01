@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
     <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
     <title>Hagman</title>
@@ -16,8 +16,10 @@
 
     <div class="container">
 
-        <div class="jumbotron">
-            <h1>Guess the Country</h1>
+        <div class="jumbotron vertical-center">
+            <div class="container text-center">
+                <h1>Guess the Country</h1>
+            </div>
         </div>
 
 
@@ -25,7 +27,7 @@
 
             <div class="col-sm-6">
                 <button type="button" class="btn btn-primary" id="startGame">Start</button>
-                <button type="button" class="btn btn-primary">Reset</button>
+                <button type="button" class="btn btn-primary" disabled>Reset</button>
 
             </div>
         </div>
@@ -38,20 +40,24 @@
                 <div class="card">
                     <div class="card-body">
                         <h5 class="card-title">Can you guess the country</h5>
-
+                        <br>
                         <p class="card-text"><span id="country"></p>
+                        <br>
                         <p class="card-text">Wins <span id="win"></span></p>
+                        <br>
                         <p class="card-text">Looses <span id="loss"></span></p>
+                        <br>
                         <p class="card-text">Number of Guesses Remaining: <span id="guess_left"></span></p>
+                        <br>
                         <p class="card-text">Letters already guessed: <span id="guess"> </span></p>
-
+                        <br>
                     </div>
                 </div>
 
                 <br><br>
                 <div class="card">
 
-                    <button class="btn btn-primary form-control" id="hintButton">Press for hint</button>
+                    <button class="btn btn-primary form-control" id="hintButton" >Press for random hints</button>
                     <div class="card">
                         <div>
                             <p id="hintText">Click the button for hint</p>
@@ -61,18 +67,21 @@
             </div>
 
             <div class="col-sm-6">
-                <div class="card">
+                <div class="card" id="interstingFactCard">
                     <h5 class="card-title">Interesting facts</h5>
-                    <img src="./assets/images/Capture-flag.JPG" class="card-img-top" alt="flag" width="200px" height="200px">
+                    <br>
+                    <img src="./assets/images/Capture-flag.JPG" class="card-img-top" alt="flag" id="imageFlag">
                     <div class="card-body">
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                            the card's content.</p>
+                        <br>
+                        <p><strong>National Anthem</strong><audio src="" controls id="nationalAnthem"></audio></p>
+                        <br>
+                        <p class="card-text" id="interstingFact"></p>
                     </div>
                 </div>
             </div>
         </div>
 
-       
+
         <!-- <h3>Guess the Country</h3>
         <h5>Country: <span id="country"></span></h5>
         <h5>Losses: <span id="loss"></span></h5>
