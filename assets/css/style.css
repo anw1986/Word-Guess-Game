@@ -4,10 +4,22 @@
 }
 
 .jumbotron h1 {
-	color:white;
+	color:#ffffff;
 }
 
 #country{
     word-spacing: 20px;
     font-weight: bold;
+}
+
+.card-title h5{
+    background-color: #428bca;
+    color: white;
+    text-align: center;
+}
+
+.btn-primary{
+    color: #ffffff;
+    background-color: #428bca;
+    border-color: #428bca;
 }

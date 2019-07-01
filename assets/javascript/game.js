@@ -34,7 +34,7 @@ var loss = 0;
 var hintPakistan = ["Second Tallest Mountain In The World", "Country Of Oldest Salt Mine", "Markhor in the National Animal", "Largest producer of handsewn soccer balls", "The oldest covilization exist in this country", "The country name translates to Land of the Pure"];
 var hintIndia = ["Largest democracies in the world", "Belongs to the continent of Asia", "Former British colony", "Largest tea producer", "World largest milk producer", "Has a seven wonder of the world"];
 var hintFrance = ["Notre-Dame", "Louvre Museum", "One of the four grand slam tennis eventsis held every year", "Has the highest number of Nobel Prizes for Literature", "Napoleon", "D-Day landings"];
-var hintRussia = ["russia1", "russia2", "russia3", "russia4", "russia5", "russia6"];
+var hintRussia = ["OPEC member", "1.8 times the size of the US", "Hosted the 1980 Summer Olympic Games", "Greatest Seige in WW II", "Has more billionaires per capita than anywhere else in the world", "Roman Abramovich"];
 
 // array object of country facts
 
@@ -54,6 +54,12 @@ var countryFacts = [{
     audio: "./assets/images/france.mp3",
     fact: "France has 28 UNESCO World Heritage Sites. It is the largest country in the EU. ‘Liberty, equality and fraternity’ (or brotherhood) is the national motto of France. Europe’s highest mountain is in the French Alps. Eiffel Tower, Notre Dame, Louvre, Montmartre, Arc de Triomphe, the river Seine and many other great attractions. Normandy were the cite for D-day landings"
 },
+
+{
+    flag: "./assets/images/russia.png",
+    audio: "./assets/images/russia.mp3",
+    fact: "The official name for Russia is the Russian Federation. Russia shares borders with many countries, including China, Ukraine, North Korea and Norway. Russia is located across 9 time zones & in terms of land area, is the largest country in world. The currency used in Russia is the ruble. The Soviet Union (USSR) was a socialist state that occupied much of northern Asia and eastern Europe from 1922 until it was dissolved in 1991. Former Soviet states include Lithuania, Georgia, Latvia, Ukraine, Kazakhstan and others. The world’s first satellite, named Sputnik, was launched by the Soviet Union in 1957. Russia has a wide range of natural resources and is one of the world’s largest producers of oil."
+}
 
 ];
 
@@ -201,6 +207,13 @@ $("#startGame").on("click", function () {
                         document.getElementById("imageFlag").src = countryFacts[2].flag;
                         document.getElementById("nationalAnthem").src = countryFacts[2].audio;
                         document.getElementById("interstingFact").innerHTML = countryFacts[2].fact;
+
+                    };
+                    if (comp_guess === "russia") {
+
+                        document.getElementById("imageFlag").src = countryFacts[3].flag;
+                        document.getElementById("nationalAnthem").src = countryFacts[3].audio;
+                        document.getElementById("interstingFact").innerHTML = countryFacts[3].fact;
 
                     };
                 }
