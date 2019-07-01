@@ -1,0 +1,13 @@
+.jumbotron {
+    background-color: #428bca;
+    /* background-image: url("./assets/images/world-flag.jpg"); */
+}
+
+.jumbotron h1 {
+	color:white;
+}
+
+#country{
+    word-spacing: 20px;
+    font-weight: bold;
+}
