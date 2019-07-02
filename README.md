@@ -6,6 +6,12 @@ This project is a HW requirement. In this project of the word guess game, I have
 
 This project is a hangman versioned country guess game. In this game the user needs to guess the country & gets 10 guesses. In order to get started, once the page loads, click on the **Start** button. To assist user, a **randomised** hint button has been created, which provides random hint associated with the country. If the user is able to guess with 10 chances, the page loads a flag, national anthem and interesting facts. Let's start playing.
 
+Snapshot of the initial screen load
+![Image of initial scrren](./assets/images/capture-hangman-1.JPG)
+
+Snapshot if the user is able to guess
+![Win](./assets/images/capture-hangman-2.JPG)
+
 ## User Test
 
 Every effort has been put in to capture user exceptions including
