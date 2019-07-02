@@ -16,7 +16,7 @@ var win = 0;
 var loss = 0;
 
 // initialize hint for country when page loads
-var hintPakistan = ["Second Tallest Mountain In The World", "Country Of Oldest Salt Mine", "Markhor in the National Animal", "Largest producer of handsewn soccer balls", "The oldest covilization exist in this country", "The country name translates to Land of the Pure"];
+var hintPakistan = ["Second Tallest Mountain In The World", "Country Of Oldest Salt Mine", "Markhor is the National Animal", "Largest producer of handsewn soccer balls", "The oldest covilization exist in this country", "The country name translates to Land of the Pure"];
 var hintIndia = ["Largest democracies in the world", "Belongs to the continent of Asia", "Former British colony", "Largest tea producer", "World largest milk producer", "Has a seven wonder of the world"];
 var hintFrance = ["Notre-Dame", "Louvre Museum", "One of the four grand slam tennis eventsis held every year", "Has the highest number of Nobel Prizes for Literature", "Napoleon", "D-Day landings"];
 var hintRussia = ["Non OPEC member", "1.8 times the size of the US", "Hosted the 1980 Summer Olympic Games", "Greatest Seige in WW II", "Has more billionaires per capita than anywhere else in the world", "Roman Abramovich"];
