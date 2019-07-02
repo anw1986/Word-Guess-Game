@@ -31,7 +31,7 @@ var countryFacts = [{
 {
     flag: "./assets/images/india.png",
     audio: "./assets/images/india.mp3",
-    fact: "India is officially known as the Republic of India. Pakistan became independent from the British Indian Empire on 15th August 1947 just one day after Pakistan. Once British rule was over, India was split into the Republic of India and the Islamic Republic of Pakistan. Later, an area between India and Pakistan became the People's Republic of Bangladesh. Many different languages are spoken in India. The main ones are Hindi, Bengali, Telugu, Marathi, Tamil, and Urdu. "
+    fact: "India is officially known as the Republic of India. It became independent from the British Indian Empire on 15th August 1947 just one day after Pakistan. Once British rule was over, India was split into the Republic of India and the Islamic Republic of Pakistan. It is the second largest English-speaking country in the world. Many different languages are spoken in India. The main ones are Hindi, Bengali, Telugu, Marathi, Tamil, and Urdu. The Indian subcontinent was home to the Indus Valley Civilisation."
 },
 
 {

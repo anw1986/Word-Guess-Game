@@ -34,7 +34,7 @@ This code checks if the user only enters letters & checks if the letter is not a
                 alert("letter already exist");
 ```
 
-Also an array object was created to incoporate multiple data points for the country. However, the use of functions and object methods is limited
+Also an array object was created to incoporate multiple data points for the country. However, the use of functions and object methods is limited. The reset button is a place holder for now, but will be coded the in the future iterations
 
 ```
 var countryFacts = [{
