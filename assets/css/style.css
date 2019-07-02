@@ -4,12 +4,15 @@
 }
 
 .jumbotron h1 {
-	color:#ffffff;
+    color:#ffffff;
+    font-size: 65px;
 }
 
 #country{
     word-spacing: 20px;
     font-weight: bold;
+    
+    
 }
 
 .card-title h5{
@@ -22,4 +25,14 @@
     color: #ffffff;
     background-color: #428bca;
     border-color: #428bca;
+    
+}
+
+p, h1, h5 {
+    font-family: 'Roboto Slab', serif;
+    
+}
+
+ p{
+    font-size: 20px;
 }

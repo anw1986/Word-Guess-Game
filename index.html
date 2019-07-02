@@ -6,9 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
     <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Crimson+Text&display=swap" rel="stylesheet">
     <title>Hagman</title>
 </head>
 
@@ -38,20 +39,21 @@
             <div class="col-sm-6">
 
                 <div class="card">
+
+                    <h5 class="card-title"
+                        style="background-color:  #428bca; color:#ffffff ; text-align: center; font-size: 30px">Can
+                        you guess the country</h5>
+                    <br>
                     <div class="card-body">
-                        <h5 class="card-title" style="background-color:  #428bca; color:#ffffff ; text-align: center;">Can you guess the country</h5>
-                        <br>
-                        <p class="card-text"><span id="country"></p>
-                        <br>
-                        <p class="card-text">Wins <span id="win"></span></p>
-                        <br>
-                        <p class="card-text">Looses <span id="loss"></span></p>
-                        <br>
+
+                        <p class="card-text" style="text-align: center"><span id="country"></p>
+                        <br><br>
                         <p class="card-text">Number of Guesses Remaining: <span id="guess_left"></span></p>
                         <br>
                         <p class="card-text">Letters already guessed: <span id="guess"> </span></p>
                         <br>
                     </div>
+
                 </div>
 
                 <br><br>
@@ -68,7 +70,9 @@
 
             <div class="col-sm-6">
                 <div class="card" id="interstingFactCard">
-                    <h5 class="card-title" style="background-color:  #428bca; color:#ffffff ; text-align: center;">Interesting facts</h5>
+                    <h5 class="card-title"
+                        style="background-color:  #428bca; color:#ffffff ; text-align: center; font-size: 30px">
+                        Interesting facts</h5>
                     <br>
                     <img src="./assets/images/Capture-flag.JPG" class="card-img-top" alt="flag" id="imageFlag">
                     <div class="card-body">
@@ -81,12 +85,7 @@
             </div>
         </div>
 
-
-        <!-- <h3>Guess the Country</h3>
-        <h5>Country: <span id="country"></span></h5>
-        <h5>Losses: <span id="loss"></span></h5>
-        <h5>Number of Guesses Remaining: <span id="guess_left"></span></h5>
-        <h5 id=>Letters already guessed: <span id="guess"> </span> </h5> -->
+        <br><br><br>
 
         <script src="./assets/javascript/game.js"></script>
 

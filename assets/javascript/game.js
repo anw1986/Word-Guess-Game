@@ -1,19 +1,4 @@
-// Psuedo Code
-// Store list of countries in array
-// when game starts computer chooses random country from array
-// store computer choice in an array
-// user enters guess letter
-// search user_guess in computer choice. Loop through length of string
-
-// var str = "scissors";
-// var indices = [];
-// for(var i=0; i<str.length;i++) {
-//     if (str[i] === "s") indices.push(i);
-// }
-
-// for(var i=0; i<indices.length;i++) {
-//     word[indices[i]]="a";
-// }
+// References
 
 // https://stackoverflow.com/questions/28007949/how-to-convert-array-into-string-without-comma-and-separated-by-space-in-javascr/28007965
 
@@ -34,7 +19,7 @@ var loss = 0;
 var hintPakistan = ["Second Tallest Mountain In The World", "Country Of Oldest Salt Mine", "Markhor in the National Animal", "Largest producer of handsewn soccer balls", "The oldest covilization exist in this country", "The country name translates to Land of the Pure"];
 var hintIndia = ["Largest democracies in the world", "Belongs to the continent of Asia", "Former British colony", "Largest tea producer", "World largest milk producer", "Has a seven wonder of the world"];
 var hintFrance = ["Notre-Dame", "Louvre Museum", "One of the four grand slam tennis eventsis held every year", "Has the highest number of Nobel Prizes for Literature", "Napoleon", "D-Day landings"];
-var hintRussia = ["OPEC member", "1.8 times the size of the US", "Hosted the 1980 Summer Olympic Games", "Greatest Seige in WW II", "Has more billionaires per capita than anywhere else in the world", "Roman Abramovich"];
+var hintRussia = ["Non OPEC member", "1.8 times the size of the US", "Hosted the 1980 Summer Olympic Games", "Greatest Seige in WW II", "Has more billionaires per capita than anywhere else in the world", "Roman Abramovich"];
 
 // array object of country facts
 
