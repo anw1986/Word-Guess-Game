@@ -51,9 +51,9 @@ var countryFacts = [{
 // Output inital counter variables on html
 document.getElementById("guess_left").innerHTML = count_guess;
 
-// initialize computer guess on clicking start button
+// initialize computer guess on clicking start button document.getElementById('startGame').onclick=function()
 
-$("#startGame").on("click", function () {
+document.getElementById('startGame').onclick=function() {
 
     userguess = [];
     answer = [];
@@ -103,112 +103,113 @@ $("#startGame").on("click", function () {
         var loadHint = hintFrance;
     }
 
-    // When the hint is clicked...
-    $("#hintButton").on("click", function () {
+    // When the hint is clicked...document.getElementById('#hintButton').onclick=function()
+    document.getElementById('hintButton').onclick = function () {
         // We generate a random number between 0 and length of hint array 
         var number = Math.floor((Math.random() * loadHint.length));
         // We display the fact from the loadHint that is in the random position we just generated.
-        $("#hintText").text(loadHint[number]);
-    })
+        // $("#hintText").text(loadHint[number]);
+        document.getElementById('hintText').innerHTML=loadHint[number];
+    }
 
-    document.onkeyup = function (event) {
+document.onkeyup = function (event) {
 
-        //check if stat button has been clicked
+    //check if stat button has been clicked
 
-        var charCode = event.keyCode; //check ascii code for user entry
+    var charCode = event.keyCode; //check ascii code for user entry
 
-        //check condition if user enters letters only
+    //check condition if user enters letters only
 
-        if ((charCode > 64 && charCode < 91) || (charCode > 96 && charCode < 123) || charCode == 8) {
+    if ((charCode > 64 && charCode < 91) || (charCode > 96 && charCode < 123) || charCode == 8) {
 
-            //check condition if element already exist in array
+        //check condition if element already exist in array
 
-            if (userguess.includes(String.fromCharCode(event.keyCode).toLowerCase()) === true) {
-                alert("letter already exist");
+        if (userguess.includes(String.fromCharCode(event.keyCode).toLowerCase()) === true) {
+            alert("letter already exist");
+        }
+
+        else {
+
+            //if the element is "new" continue code line
+
+            userguess[x] = event.key; //log user guess in the array at index position x
+            console.log(userguess);
+            console.log(event.key);
+            document.getElementById("guess").innerHTML = userguess;
+
+            // check if unable to guess
+
+            if (count_guess === 0) {
+                alert("Sorry!! You were unable to guess the country" + " " + comp_guess);
+                return;
             }
 
-            else {
-
-                //if the element is "new" continue code line
-
-                userguess[x] = event.key; //log user guess in the array at index position x
-                console.log(userguess);
-                console.log(event.key);
-                document.getElementById("guess").innerHTML = userguess;
-
-                // check if unable to guess
-
-                if (count_guess === 0) {
-                    alert("Sorry!! You were unable to guess the country" + " " + comp_guess);
-                    return;
-                }
-
-                count_guess--;
-                document.getElementById("guess_left").innerHTML = count_guess;
-
-                // debugger;
-
-                // store index position of the comp_guess word and user guess letter 
-                var indices = [];
-                for (var i = 0; i < comp_guess.length; i++) {
-                    if (comp_guess[i] === userguess[x]) indices.push(i);
-                };
-
-                // debugger;
-                console.log(indices);
-
-                // store common user guess letter in the answer array
-
-                if (indices.length > 0) {
-                    for (var j = 0; j < indices.length; j++) {
-                        blank_answer[indices[j]] = userguess[x];
-                        // debugger;
-                        console.log(blank_answer);
-                    };
-                };
-
-                document.getElementById("country").innerHTML = blank_answer.join(' ');
-
-                // check for winning condition
-
-                if (blank_answer.indexOf("_") === -1) {
-                    alert("Kuddos!! For guessing the country");
-                    if (comp_guess === "pakistan") {
-
-                        document.getElementById("imageFlag").src = countryFacts[0].flag;
-                        document.getElementById("nationalAnthem").src = countryFacts[0].audio;
-                        document.getElementById("interstingFact").innerHTML = countryFacts[0].fact;
-
-                    };
-                    if (comp_guess === "india") {
-
-                        document.getElementById("imageFlag").src = countryFacts[1].flag;
-                        document.getElementById("nationalAnthem").src = countryFacts[1].audio;
-                        document.getElementById("interstingFact").innerHTML = countryFacts[1].fact;
-
-                    };
-                    if (comp_guess === "france") {
-
-                        document.getElementById("imageFlag").src = countryFacts[2].flag;
-                        document.getElementById("nationalAnthem").src = countryFacts[2].audio;
-                        document.getElementById("interstingFact").innerHTML = countryFacts[2].fact;
-
-                    };
-                    if (comp_guess === "russia") {
-
-                        document.getElementById("imageFlag").src = countryFacts[3].flag;
-                        document.getElementById("nationalAnthem").src = countryFacts[3].audio;
-                        document.getElementById("interstingFact").innerHTML = countryFacts[3].fact;
-
-                    };
-                }
-                x++;
-            }
+            count_guess--;
+            document.getElementById("guess_left").innerHTML = count_guess;
 
             // debugger;
-        };
+
+            // store index position of the comp_guess word and user guess letter 
+            var indices = [];
+            for (var i = 0; i < comp_guess.length; i++) {
+                if (comp_guess[i] === userguess[x]) indices.push(i);
+            };
+
+            // debugger;
+            console.log(indices);
+
+            // store common user guess letter in the answer array
+
+            if (indices.length > 0) {
+                for (var j = 0; j < indices.length; j++) {
+                    blank_answer[indices[j]] = userguess[x];
+                    // debugger;
+                    console.log(blank_answer);
+                };
+            };
+
+            document.getElementById("country").innerHTML = blank_answer.join(' ');
+
+            // check for winning condition
+
+            if (blank_answer.indexOf("_") === -1) {
+                alert("Kuddos!! For guessing the country");
+                if (comp_guess === "pakistan") {
+
+                    document.getElementById("imageFlag").src = countryFacts[0].flag;
+                    document.getElementById("nationalAnthem").src = countryFacts[0].audio;
+                    document.getElementById("interstingFact").innerHTML = countryFacts[0].fact;
+                    return;
+                };
+                if (comp_guess === "india") {
+
+                    document.getElementById("imageFlag").src = countryFacts[1].flag;
+                    document.getElementById("nationalAnthem").src = countryFacts[1].audio;
+                    document.getElementById("interstingFact").innerHTML = countryFacts[1].fact;
+                    return;
+                };
+                if (comp_guess === "france") {
+
+                    document.getElementById("imageFlag").src = countryFacts[2].flag;
+                    document.getElementById("nationalAnthem").src = countryFacts[2].audio;
+                    document.getElementById("interstingFact").innerHTML = countryFacts[2].fact;
+                    return;
+                };
+                if (comp_guess === "russia") {
+
+                    document.getElementById("imageFlag").src = countryFacts[3].flag;
+                    document.getElementById("nationalAnthem").src = countryFacts[3].audio;
+                    document.getElementById("interstingFact").innerHTML = countryFacts[3].fact;
+                    return;
+                };
+            }
+            x++;
+        }
+
+        // debugger;
     };
-})
+};
+}
 
 
 
